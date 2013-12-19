@@ -16,5 +16,5 @@ public interface TermManager {
 
     public List<Term> getTermsWithNameContaining(String partialString);
 
-    public boolean update(Term term);
+    public void update(Term term);
 }

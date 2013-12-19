@@ -11,5 +11,6 @@ public interface PersistencyManager {
     public boolean add(Term term);
     public List<Term> getAll();
     public List<Term> getAllContaining(String partialWord);
-    public boolean update(Term term);
+    public void update(Term term);
+    public void delete(String key);
 }

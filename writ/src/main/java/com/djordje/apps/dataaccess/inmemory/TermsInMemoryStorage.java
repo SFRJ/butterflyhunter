@@ -1,6 +1,7 @@
 package com.djordje.apps.dataaccess.inmemory;
 
 import com.djordje.apps.dataaccess.PersistencyManager;
+import com.djordje.apps.errorhandling.TermNotFoundException;
 import com.djordje.apps.model.Term;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -66,10 +67,25 @@ public class TermsInMemoryStorage implements PersistencyManager {
     }
 
     @Override
-    public boolean update(Term term) {
-    //TODO: To update you need to retrieve modify and store again
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+    public void update(Term term) {
+        Term termToUpdate = get(term.getName());
+        delete(termToUpdate.getName());
+        termToUpdate.setMinusVotes(term.getMinusVotes());
+        termToUpdate.setPlusVotes(term.getPlusVotes());
+        termToUpdate.setTotalVotes(term.getPlusVotes() - term.getMinusVotes());
+        termToUpdate.setCreationTime(term.getCreationTime());
+        add(termToUpdate);
+    }
 
+    public void delete(String key) {
+        for(File current : PATH_TO_FILE_REPOSITORY.listFiles()) {
+            if(current.isFile()){
+                Term term = (Term) unmarshall(current);
+                if(term.getName().equalsIgnoreCase(key))
+                    current.delete();
+                break;
+            }
+        }
     }
 
     private Object unmarshall(File xmlFile) {

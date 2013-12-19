@@ -37,20 +37,22 @@ public class VotingSpecification {
         termManager.add(term);
         votesManager.plusVote(term, knowledgeProvider);
         assertThat(termManager.getByName("SampleTerm").getPlusVotes(), is(1));
+        assertThat(termManager.getByName(term.getName()).getTotalVotes(), is(1));
     }
 
     @Test
     public void a_term_can_get_negative_votes() {
         termManager.add(term);
         votesManager.minusVote(term,knowledgeProvider);
-        assertThat(termManager.getByName("SampleTerm").getMinusVotes(), is(-1));
+        assertThat(termManager.getByName("SampleTerm").getMinusVotes(), is(1));
+        assertThat(termManager.getByName(term.getName()).getTotalVotes(), is(-1));
     }
 
     @Test
     public void a_term_can_calculate_the_total_given_votes() {
         termManager.add(term);
         votesManager.minusVote(term, knowledgeProvider);
-        assertThat(termManager.getByName("SampleTerm").getTotalVotes(), is(-1));
+        assertThat(termManager.getByName(term.getName()).getTotalVotes(), is(-1));
     }
 
     @Test(expected = AllreadyVotedOnThatTermException.class)

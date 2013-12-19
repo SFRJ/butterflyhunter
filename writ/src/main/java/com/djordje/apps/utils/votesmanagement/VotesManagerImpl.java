@@ -19,16 +19,17 @@ public class VotesManagerImpl implements VotesManager {
         Term term = termManager.getByName(sampleTerm.getName());
         validateKnoledgeProviderAlreadyVoted(sampleTerm,knowledgeProvider);
         term.setPlusVotes(term.getPlusVotes() + 1);
-        term.setTotalVotes(term.getTotalVotes() + 1);
+        term.setTotalVotes(term.getPlusVotes() - term.getMinusVotes());
+        termManager.update(term);
     }
 
     @Override
     public void minusVote(Term sampleTerm, KnowledgeProvider knowledgeProvider) {
         Term term = termManager.getByName(sampleTerm.getName());
         validateKnoledgeProviderAlreadyVoted(sampleTerm,knowledgeProvider);
-        term.setMinusVotes(term.getMinusVotes() - 1);
-        term.setTotalVotes(term.getTotalVotes() - 1);
-        termManager.update(sampleTerm);
+        term.setMinusVotes(term.getMinusVotes() + 1);
+        term.setTotalVotes(term.getPlusVotes() - term.getMinusVotes());
+        termManager.update(term);
     }
 
 }

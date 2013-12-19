@@ -42,7 +42,7 @@ public class TermManagerImpl implements TermManager {
     }
 
     @Override
-    public boolean update(Term term) {
-        return termsInMemoryStorage.update(term);
+    public void update(Term term) {
+        termsInMemoryStorage.update(term);
     }
 }

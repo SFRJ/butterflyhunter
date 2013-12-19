@@ -6,6 +6,7 @@ import com.djordje.apps.model.Term;
 import com.djordje.apps.utils.termmanagement.TermManager;
 import com.djordje.apps.utils.termmanagement.TermManagerImpl;
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.File;
@@ -43,6 +44,7 @@ public class AddingANewTermSpecification {
         manager.add(aTermWithExactly400Characters());
     }
 
+    @Before
     @After
     public void eraseAllCreatedFiles() {
         File folder = new File("/home/pro/Desktop/glassfish4/temporatyxmlstorage/");
