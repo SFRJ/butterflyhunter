@@ -2,13 +2,7 @@ package specs.support;
 
 import com.djordje.apps.model.Term;
 
-/**
- * Created with IntelliJ IDEA.
- * User: pro
- * Date: 23/10/13
- * Time: 22:20
- * To change this template use File | Settings | File Templates.
- */
+
 public class TermStubs {
 
     public static Term aSimpleTerm() {

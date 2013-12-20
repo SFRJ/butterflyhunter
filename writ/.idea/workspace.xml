@@ -9,12 +9,12 @@
     <file path="/pom.xml" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382790539937" ignored="false" />
     <file path="/fragment.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387482635674" ignored="false" />
     <file path="/TermManager.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387483685839" ignored="false" />
-    <file path="/Term.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1384027701176" ignored="false" />
+    <file path="/Term.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387526205498" ignored="false" />
     <file path="/PersistenceMediator.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382890010362" ignored="false" />
     <file path="/LongDescriptionException.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382563095480" ignored="false" />
     <file path="/TermFactory.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382563665993" ignored="false" />
     <file path="/TermNotFoundException.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387482649892" ignored="false" />
-    <file path="/VotingSpecification.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387485584423" ignored="false" />
+    <file path="/VotingSpecification.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387525641460" ignored="false" />
     <file path="/VotesManager.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382887107596" ignored="false" />
     <file path="/VotesManagerImpl.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387484533796" ignored="false" />
     <file path="/TermRetrievalSpecification.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1386877676504" ignored="false" />
@@ -23,7 +23,7 @@
     <file path="/FunctionalSupport.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382796888410" ignored="false" />
     <file path="/HelloBean.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382796851490" ignored="false" />
     <file path="/AleadyVotedOnThatTermException.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382884893862" ignored="false" />
-    <file path="/KnowledgeProvider.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382885253476" ignored="false" />
+    <file path="/KnowledgeProvider.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387527424328" ignored="false" />
     <file path="/ValidationDecorator.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382887277782" ignored="false" />
     <file path="/VotingDecorator.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382886950690" ignored="false" />
     <file path="/TermValidator.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387348814939" ignored="false" />
@@ -32,7 +32,7 @@
     <file path="/addterm.xhtml" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387350510214" ignored="false" />
     <file path="/SubmitTerm.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382993545228" ignored="false" />
     <file path="/GetTerms.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1383947259280" ignored="false" />
-    <file path="/TermsInMemoryStorage.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387485986541" ignored="false" />
+    <file path="/TermsInMemoryStorage.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387526055618" ignored="false" />
     <file path="/DataAccessor.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1383949438740" ignored="false" />
     <file path="/RetrieveController.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1384114852055" ignored="false" />
     <file path="/tem.xsd" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1383957754616" ignored="false" />
@@ -62,6 +62,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -99,53 +100,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/test/java/specs/AddingANewTermSpecification.java" line="42" class="specs.AddingANewTermSpecification" package="specs">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/votesmanagement/VotesManagerImpl.java" line="27" class="com.djordje.apps.utils.votesmanagement.VotesManagerImpl" package="com.djordje.apps.utils.votesmanagement">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/dataaccess/inmemory/TermsInMemoryStorage.java" line="75" class="com.djordje.apps.dataaccess.inmemory.TermsInMemoryStorage" package="com.djordje.apps.dataaccess.inmemory">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -155,28 +109,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VotingSpecification.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="VotingSpecification.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/specs/VotingSpecification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="9" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.41033435">
+            <state line="65" column="17" selection-start="2448" selection-end="2448" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VotesManagerImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/votesmanagement/VotesManagerImpl.java">
+      <file leaf-file-name="ReflectiveCallable.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="16" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VotesManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/votesmanagement/VotesManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="16" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+            <state line="11" column="40" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -185,7 +130,7 @@
       <file leaf-file-name="TermManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/termmanagement/TermManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="394" selection-end="429" vertical-scroll-proportion="0.0">
+            <state line="10" column="16" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,7 +139,7 @@
       <file leaf-file-name="TermManagerImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/termmanagement/TermManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="30" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0">
+            <state line="25" column="37" selection-start="830" selection-end="830" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,7 +148,7 @@
       <file leaf-file-name="PersistencyManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/dataaccess/PersistencyManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="16" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
+            <state line="9" column="16" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,7 +157,43 @@
       <file leaf-file-name="TermsInMemoryStorage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/dataaccess/inmemory/TermsInMemoryStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="0" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.0">
+            <state line="103" column="16" selection-start="3445" selection-end="3445" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TermStubs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/specs/support/TermStubs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Term.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/model/Term.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="24" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KnowledgeProvider.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/model/KnowledgeProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="28" selection-start="220" selection-end="257" vertical-scroll-proportion="0.19417475">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/file.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -228,9 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/specs/FileStorageSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/frontendcontrollers/validators/TermInputValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/errorhandling/TermAlreadyExistsException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/frontendcontrollers/CreateController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/termmanagement/TermValidator.java" />
@@ -241,9 +219,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/termmanagement/TermManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/termmanagement/TermManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/specs/AddingANewTermSpecification.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/dataaccess/inmemory/TermsInMemoryStorage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/votesmanagement/VotesManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/specs/support/TermStubs.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/model/Term.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/dataaccess/inmemory/TermsInMemoryStorage.java" />
         <option value="$PROJECT_DIR$/src/test/java/specs/VotingSpecification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/djordje/apps/model/KnowledgeProvider.java" />
       </list>
     </option>
   </component>
@@ -327,13 +308,34 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="writ" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="writ" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: junit:junit:4.11" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="junit-4.11.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -445,10 +447,6 @@
               <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="votesmanagement" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -514,93 +512,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="writ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="writ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataaccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="writ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="writ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="apps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataaccess" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inmemory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -617,29 +555,7 @@
       <recent name="com.djordje.apps" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VotingSpecification">
-    <configuration default="false" name="Proba" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="specs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="specs.Proba" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="writ" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.VotingSpecification.every_term_knows_about_the_voters_that_voted_on_it">
     <configuration default="false" name="TermRetrievalSpecification" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -758,6 +674,40 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="VotingSpecification.every_term_knows_about_the_voters_that_voted_on_it" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="specs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="writ" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="specs" />
+      <option name="MAIN_CLASS_NAME" value="specs.VotingSpecification" />
+      <option name="METHOD_NAME" value="every_term_knows_about_the_voters_that_voted_on_it" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -783,19 +733,6 @@
       </server-settings>
       <predefined_log_file id="GlassFish" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -824,6 +761,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -946,19 +896,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Glassfish Server.glassfish4_in_desktop" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Proba" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TermRetrievalSpecification" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.VotingSpecification" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.VotingSpecification.a_term_can_calculate_the_total_given_votes" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.AddingANewTermSpecification and 3 more" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TermRetrievalSpecification" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.VotingSpecification" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.VotingSpecification.a_term_can_calculate_the_total_given_votes" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AddingANewTermSpecification and 3 more" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.VotingSpecification.every_term_knows_about_the_voters_that_voted_on_it" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.VotingSpecification" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.VotingSpecification.a_term_can_calculate_the_total_given_votes" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AddingANewTermSpecification and 3 more" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TermRetrievalSpecification" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Proba" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.VotingSpecification.every_term_knows_about_the_voters_that_voted_on_it" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.VotingSpecification" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.VotingSpecification.a_term_can_calculate_the_total_given_votes" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.AddingANewTermSpecification and 3 more" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TermRetrievalSpecification" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1035,9 +985,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980299" sideWeight="0.67114097" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939324" sideWeight="0.67114097" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3691275" sideWeight="0.33884948" order="8" side_tool="true" content_ui="tabs" x="72" y="275" width="1271" height="215" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28762805" sideWeight="0.6308725" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3691275" sideWeight="0.6611505" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3691275" sideWeight="0.33884948" order="8" side_tool="true" content_ui="tabs" x="72" y="275" width="1271" height="215" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28762805" sideWeight="0.63255036" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36744967" sideWeight="0.6611505" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980299" sideWeight="0.67114097" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1111,120 +1061,198 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/specs/FileStorageSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="431" selection-end="486" vertical-scroll-proportion="0.35958904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/addterm.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="52" selection-start="472" selection-end="472" vertical-scroll-proportion="0.38745388" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/errorhandling/TermAlreadyExistsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/errorhandling/TermNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="50" selection-start="303" selection-end="303" vertical-scroll-proportion="0.42857143">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/specs/TermRetrievalSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-7-oracle/src.zip!/java/io/File.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1026" column="19" selection-start="42534" selection-end="42534" vertical-scroll-proportion="0.3322034">
-          <folding />
-        </state>
+        <state line="1026" column="19" selection-start="42534" selection-end="42534" vertical-scroll-proportion="0.3322034" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/specs/AddingANewTermSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="33" selection-start="1675" selection-end="1865" vertical-scroll-proportion="0.0">
+        <state line="52" column="33" selection-start="1675" selection-end="1865" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/votesmanagement/VotesManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="264" selection-end="264" vertical-scroll-proportion="0.31914893" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/votesmanagement/VotesManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="16" selection-start="927" selection-end="927" vertical-scroll-proportion="0.331307" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/READ_THIS.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/termmanagement/TermManager.java">
+    <entry file="file://$PROJECT_DIR$/file.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="394" selection-end="429" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/specs/support/TermStubs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/dataaccess/PersistencyManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
+        <state line="9" column="16" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/termmanagement/TermManagerImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="30" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0">
+        <state line="11" column="40" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/dataaccess/inmemory/TermsInMemoryStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="2484" selection-end="2484" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/model/Term.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="15" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.331307">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/votesmanagement/VotesManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/votesmanagement/VotesManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="16" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
+        <state line="103" column="16" selection-start="3445" selection-end="3445" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/specs/VotingSpecification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="9" selection-start="1575" selection-end="1575" vertical-scroll-proportion="0.41033435">
+        <state line="65" column="17" selection-start="2448" selection-end="2448" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/termmanagement/TermManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="37" selection-start="830" selection-end="830" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/utils/termmanagement/TermManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="16" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/model/Term.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="24" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/model/KnowledgeProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="28" selection-start="220" selection-end="257" vertical-scroll-proportion="0.19417475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>writ:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>JSF</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>writ</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.googlecode.totallylazy:totallylazy:1049</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

@@ -9,7 +9,7 @@ public class VoteValidator {
     protected static void validateKnoledgeProviderAlreadyVoted(Term term, KnowledgeProvider knowledgeProvider) {
         if(term.getVoters().contains(knowledgeProvider.getNickname()))
             throw new AllreadyVotedOnThatTermException(knowledgeProvider.getNickname() + " already voted on the term " + term);
-        term.getVoters().add(knowledgeProvider.getNickname());
+        term.getVoters().add(knowledgeProvider);
     }
 
 

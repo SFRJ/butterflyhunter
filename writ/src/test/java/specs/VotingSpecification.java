@@ -61,4 +61,15 @@ public class VotingSpecification {
         votesManager.plusVote(term,knowledgeProvider);
         votesManager.minusVote(term, knowledgeProvider);
     }
+
+    @Test
+    public void every_term_knows_about_the_voters_that_voted_on_it() {
+        termManager.add(term);
+        votesManager.plusVote(term,knowledgeProvider);
+        Term votedTerm = termManager.getByName(term.getName());
+        votedTerm.getVoters().add(term.getVoters().get(0));
+        String voterName = termManager.getByName(term.getName()).getName();
+        assertThat(voterName,is(knowledgeProvider.getNickname()));
+    }
+
 }

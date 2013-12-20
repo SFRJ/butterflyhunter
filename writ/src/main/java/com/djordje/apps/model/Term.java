@@ -26,13 +26,13 @@ public class Term {
     private int totalVotes;
     @XmlElement(name = "CREATIONTIME")
     private long creationTime;
-
-    private List<String> voters;
+    @XmlElement(name = "VOTERS")
+    private List<KnowledgeProvider> voters;
 
     public Term(String name, String description) {
         this.name = name;
         this.description = description;
-        this.voters = new ArrayList<String>();
+        this.voters = new ArrayList<KnowledgeProvider>();
     }
 
     public String getName() {
@@ -55,7 +55,7 @@ public class Term {
         return totalVotes;
     }
 
-    public List<String> getVoters() {
+    public List<KnowledgeProvider> getVoters() {
         return voters;
     }
 
@@ -77,6 +77,10 @@ public class Term {
 
     public void setCreationTime(long creationTime) {
         this.creationTime = creationTime;
+    }
+
+    public void setVoters(List<KnowledgeProvider> voters) {
+        this.voters = voters;
     }
 
     public String getCreationPath() {
