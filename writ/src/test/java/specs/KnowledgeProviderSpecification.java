@@ -1,6 +1,5 @@
 package specs;
 
-import com.djordje.apps.errorhandling.AllreadyVotedOnThatTermException;
 import com.djordje.apps.model.KnowledgeProvider;
 import com.djordje.apps.model.Term;
 import com.djordje.apps.utils.knowledgeprovidermanagement.KnowledgeProviderManager;
@@ -34,6 +33,7 @@ public class KnowledgeProviderSpecification {
                 current.delete();
     }
 
+    //needs implementation
     @Test
     public void when_a_knowledge_provider_votes_on_a_term_the_term_name_is_added_to_the_list_of_voted_terms() {
         termManager.add(term);
