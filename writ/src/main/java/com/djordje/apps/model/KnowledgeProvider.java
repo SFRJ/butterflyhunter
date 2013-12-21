@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlValue;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class KnowledgeProvider {
-//TODO make sure this is unmarshalled correctly
     @XmlValue
     private String nickname;
 
