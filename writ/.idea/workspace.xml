@@ -23,7 +23,7 @@
     <file path="/FunctionalSupport.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382796888410" ignored="false" />
     <file path="/HelloBean.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382796851490" ignored="false" />
     <file path="/AleadyVotedOnThatTermException.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382884893862" ignored="false" />
-    <file path="/KnowledgeProvider.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387527424328" ignored="false" />
+    <file path="/KnowledgeProvider.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387641182735" ignored="false" />
     <file path="/ValidationDecorator.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382887277782" ignored="false" />
     <file path="/VotingDecorator.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1382886950690" ignored="false" />
     <file path="/TermValidator.java" changelist="c79123cf-9176-4c6e-b3b7-23a514e831f7" time="1387348814939" ignored="false" />
@@ -62,7 +62,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -98,6 +99,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -182,7 +184,7 @@
       <file leaf-file-name="KnowledgeProvider.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/model/KnowledgeProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="32" selection-start="368" selection-end="368" vertical-scroll-proportion="0.2840909">
+            <state line="9" column="47" selection-start="338" selection-end="338" vertical-scroll-proportion="0.17045455">
               <folding />
             </state>
           </provider>
@@ -861,6 +863,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40268457" sideWeight="0.72970843" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -875,14 +878,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980299" sideWeight="0.67114097" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939324" sideWeight="0.67114097" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3691275" sideWeight="0.33884948" order="8" side_tool="true" content_ui="tabs" x="72" y="275" width="1271" height="215" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28762805" sideWeight="0.67114097" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36744967" sideWeight="0.6611505" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3691275" sideWeight="0.33884948" order="8" side_tool="true" content_ui="tabs" x="72" y="275" width="1271" height="215" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980299" sideWeight="0.67114097" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.344" sideWeight="0.46656176" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.49960598" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1050,7 +1052,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/djordje/apps/model/KnowledgeProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="368" selection-end="368" vertical-scroll-proportion="0.2840909">
+        <state line="9" column="47" selection-start="338" selection-end="338" vertical-scroll-proportion="0.17045455">
           <folding />
         </state>
       </provider>
