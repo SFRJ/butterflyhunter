@@ -3,14 +3,16 @@ package com.djordje.apps.utils.votesmanagement;
 import com.djordje.apps.errorhandling.AllreadyVotedOnThatTermException;
 import com.djordje.apps.model.KnowledgeProvider;
 import com.djordje.apps.model.Term;
+import com.djordje.apps.utils.knowledgeprovidermanagement.KnowledgeProviderManager;
+import com.djordje.apps.utils.knowledgeprovidermanagement.KnowledgeProviderManagerImpl;
 
 public class VoteValidator {
 
-    protected static void validateKnoledgeProviderAlreadyVoted(Term term, KnowledgeProvider knowledgeProvider) {
-        if(term.getVoters().contains(knowledgeProvider.getNickname()))
-            throw new AllreadyVotedOnThatTermException(knowledgeProvider.getNickname() + " already voted on the term " + term);
-        term.getVoters().add(knowledgeProvider);
+    public static boolean canCastAVote(KnowledgeProvider knowledgeProvider, String termName) {
+        for(String currentTerm : knowledgeProvider.getVotedTerms())
+            if(currentTerm.equalsIgnoreCase(termName))
+                return false;
+        return true;
     }
-
 
 }

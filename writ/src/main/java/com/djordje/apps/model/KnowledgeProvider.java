@@ -1,14 +1,17 @@
 package com.djordje.apps.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
+import java.util.List;
 
+@XmlRootElement(name="KNOWLEDGEPROVIDER",namespace = "com.djordje.apps.model.KnowledgeProvider")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class KnowledgeProvider {
-    @XmlValue
+
+    @XmlElement(name = "NICKNAME")
     private String nickname;
+    @XmlElement(name = "VOTEDTERMS")
+    private List<String> votedTerms = new ArrayList<String>();
 
     public KnowledgeProvider() {
     }
@@ -23,5 +26,9 @@ public class KnowledgeProvider {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
+    }
+
+    public List<String> getVotedTerms() {
+        return votedTerms;
     }
 }

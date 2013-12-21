@@ -3,6 +3,8 @@ package specs;
 import com.djordje.apps.errorhandling.AllreadyVotedOnThatTermException;
 import com.djordje.apps.model.KnowledgeProvider;
 import com.djordje.apps.model.Term;
+import com.djordje.apps.utils.knowledgeprovidermanagement.KnowledgeProviderManager;
+import com.djordje.apps.utils.knowledgeprovidermanagement.KnowledgeProviderManagerImpl;
 import com.djordje.apps.utils.termmanagement.TermManager;
 import com.djordje.apps.utils.termmanagement.TermManagerImpl;
 import com.djordje.apps.utils.votesmanagement.VotesManager;
@@ -16,13 +18,13 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static specs.support.TermStubs.aTermWithExactly400Characters;
 
-public class VotingSpecification {
+public class KnowledgeProviderSpecification {
 
     private final KnowledgeProvider knowledgeProvider = new KnowledgeProvider("sfrj");
     private final TermManager termManager = new TermManagerImpl();
     private final VotesManager votesManager = new VotesManagerImpl(termManager);
     private final Term term = aTermWithExactly400Characters();
-
+    private final KnowledgeProviderManager knowledgeProviderManager = new KnowledgeProviderManagerImpl();
 
     @Before
     public void eraseAllCreatedFiles() {
@@ -33,32 +35,17 @@ public class VotingSpecification {
     }
 
     @Test
-    public void a_term_can_get_possitive_votes() {
-        termManager.add(term);
-        votesManager.plusVote(term, knowledgeProvider);
-        assertThat(termManager.getByName("SampleTerm").getPlusVotes(), is(1));
-        assertThat(termManager.getByName(term.getName()).getTotalVotes(), is(1));
-    }
-
-    @Test
-    public void a_term_can_get_negative_votes() {
-        termManager.add(term);
-        votesManager.minusVote(term,knowledgeProvider);
-        assertThat(termManager.getByName("SampleTerm").getMinusVotes(), is(1));
-        assertThat(termManager.getByName(term.getName()).getTotalVotes(), is(-1));
-    }
-
-    @Test
-    public void a_term_can_calculate_the_total_given_votes() {
-        termManager.add(term);
-        votesManager.minusVote(term, knowledgeProvider);
-        assertThat(termManager.getByName(term.getName()).getTotalVotes(), is(-1));
-    }
-
-    @Test(expected = AllreadyVotedOnThatTermException.class)
-    public void a_knowledge_provider_can_give_only_one_vote_to_one_term() {
+    public void when_a_knowledge_provider_votes_on_a_term_the_term_name_is_added_to_the_list_of_voted_terms() {
         termManager.add(term);
         votesManager.plusVote(term,knowledgeProvider);
-        votesManager.minusVote(term, knowledgeProvider);
+        boolean containsVotedTerm = false;
+        for(String currentTerm : knowledgeProviderManager.getKnowledgeProvider("sfrj").getVotedTerms()) {
+            if(currentTerm.equalsIgnoreCase(term.getName())) {
+                containsVotedTerm = true;
+            break;
+            }
+        }
+        assertThat(containsVotedTerm,is(true));
     }
+
 }
