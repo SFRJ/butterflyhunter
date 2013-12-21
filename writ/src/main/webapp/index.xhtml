@@ -13,20 +13,20 @@
             <f:ajax event="keyup" render=":outputedTerms" listener="#{retrieveController.searchTermThatContainsString}"/>
         </p:inputText>
     </h:form>
+    <br/>
+    <br/>
     <h:panelGrid id="outputedTerms" columns="1" width="500">
         <ui:repeat value="#{retrieveController.terms}" var="term">
-
-
-            <p:layout style="min-width:600px;min-height:200px;word-wrap:break-word" id="layout">
+            <p:layout style="width:50%;min-height:300px;word-wrap:break-word" id="layout">
                 <p:layoutUnit position="center">
-                    <p:layout style="word-wrap:break-word">
+                    <p:layout>
                         <p:layoutUnit position="north">
                             #{term.name}
                         </p:layoutUnit>
                         <p:layoutUnit position="west">
                             #{term.totalVotes}
                         </p:layoutUnit>
-                        <p:layoutUnit position="center" style="max-width:600;word-wrap:break-word">
+                        <p:layoutUnit position="center">
                             #{term.description}
                         </p:layoutUnit>
                         <p:layoutUnit position="south">
@@ -35,7 +35,7 @@
                     </p:layout>
                 </p:layoutUnit>
             </p:layout>
-
+            <br/>
         </ui:repeat>
     </h:panelGrid>
 </h:body>
