@@ -2,10 +2,13 @@ package com.djordje.apps.dataaccess;
 
 import com.djordje.apps.model.Term;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public interface PersistencyManager {
+
+    public static final File PATH_TO_FILE_REPOSITORY = new File("/home/pro/Desktop/glassfish4/temporaryxmlstorage/terms/");
 
     public Term get(String key);
     public boolean add(Term term);

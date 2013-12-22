@@ -14,11 +14,10 @@ import java.util.*;
 
 public class TermsInMemoryStorage implements PersistencyManager {
 
-    public static final File PATH_TO_FILE_REPOSITORY = new File("/home/pro/Desktop/glassfish4/temporatyxmlstorage/");
-
     public Term get(String key) {
         Term output = null;
         File folder = PATH_TO_FILE_REPOSITORY;
+        if(folder.exists())
         for(File current : folder.listFiles()) {
             if(current.isFile()){
                 output = (Term) unmarshall(current);
@@ -101,11 +100,18 @@ public class TermsInMemoryStorage implements PersistencyManager {
 
     private void marshall(Term term) throws JAXBException, IOException {
         term.setCreationTime(System.currentTimeMillis());
-        File file = new File(term.getCreationPath());
+        File file = new File(pathToMarshalledFile(term));
         JAXBContext context = JAXBContext.newInstance(Term.class);
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         marshaller.marshal(term,new FileOutputStream(file));
+    }
+
+    private String pathToMarshalledFile(Term term) {
+        if(term.getCreationTime() > 0L) {
+        return PATH_TO_FILE_REPOSITORY.getPath() + "/" + term.getName() + term.getCreationTime() + ".xml";
+        }
+        return null;
     }
 
 

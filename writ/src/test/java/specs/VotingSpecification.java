@@ -9,6 +9,7 @@ import com.djordje.apps.utils.votesmanagement.VotesManager;
 import com.djordje.apps.utils.votesmanagement.VotesManagerImpl;
 import org.junit.Before;
 import org.junit.Test;
+import specs.support.Cleanup;
 
 import java.io.File;
 
@@ -16,21 +17,12 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static specs.support.TermStubs.aTermWithExactly400Characters;
 
-public class VotingSpecification {
+public class VotingSpecification extends Cleanup {
 
     private final KnowledgeProvider knowledgeProvider = new KnowledgeProvider("sfrj");
     private final TermManager termManager = new TermManagerImpl();
     private final VotesManager votesManager = new VotesManagerImpl(termManager);
     private final Term term = aTermWithExactly400Characters();
-
-
-    @Before
-    public void eraseAllCreatedFiles() {
-        File folder = new File("/home/pro/Desktop/glassfish4/temporatyxmlstorage/");
-        for(File current : folder.listFiles())
-            if(current.isFile())
-                current.delete();
-    }
 
     @Test
     public void a_term_can_get_possitive_votes() {

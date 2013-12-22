@@ -2,8 +2,10 @@ package specs;
 
 import com.djordje.apps.utils.termmanagement.TermManager;
 import com.djordje.apps.utils.termmanagement.TermManagerImpl;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import specs.support.Cleanup;
 
 import java.io.File;
 
@@ -12,17 +14,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static specs.support.TermStubs.aCustomTermWith;
 import static specs.support.TermStubs.aTermWithExactly400Characters;
 
-public class TermRetrievalSpecification {
+public class TermRetrievalSpecification extends Cleanup {
 
     private TermManager manager = new TermManagerImpl();
-
-    @Before
-    public void eraseAllCreatedFiles() {
-        File folder = new File("/home/pro/Desktop/glassfish4/temporatyxmlstorage/");
-        for(File current : folder.listFiles())
-            if(current.isFile())
-                current.delete();
-    }
 
     @Test
     public void returns_all_elements_in_storage() {

@@ -71,12 +71,4 @@ public class Term {
     public void setCreationTime(long creationTime) {
         this.creationTime = creationTime;
     }
-
-    public String getCreationPath() {
-        if(getCreationTime() > 0L){
-            //TODO: A property is needed to this(it is specific to the environment where the app runs)
-            return "/home/pro/Desktop/glassfish4/temporatyxmlstorage/" + getName() + getCreationTime() + ".xml";
-        }
-        return null;
-    }
 }

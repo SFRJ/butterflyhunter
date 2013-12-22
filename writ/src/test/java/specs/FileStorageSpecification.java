@@ -1,26 +1,17 @@
 package specs;
 
 import com.djordje.apps.dataaccess.inmemory.TermsInMemoryStorage;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import specs.support.Cleanup;
 
 import java.io.File;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static specs.support.TermStubs.aCustomTermWith;
 
-/**
- * Integration persistence testing
- */
-public class FileStorageSpecification {
-
-    @Before
-    public void eraseAllCreatedFiles() {
-        File folder = new File("/home/pro/Desktop/glassfish4/temporatyxmlstorage/");
-        for(File current : folder.listFiles())
-            if(current.isFile())
-                current.delete();
-    }
+public class FileStorageSpecification extends Cleanup {
 
     @Test
     public void should_return_terms_from_storage_caseinsensitive() {
