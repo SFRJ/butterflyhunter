@@ -5,43 +5,13 @@
       xmlns:p="http://primefaces.org/ui">
 <h:head>Welcome to WRIT</h:head>
 <h:body>
-    <h:link value="Suggest a new Term" outcome="addterm" />
-    <h:form>
-        <h:messages/>
-        <h:outputLabel for="searchfield" value="Search a term:" />
-        <p:inputText value="#{retrieveController.searchTerm}">
-            <f:ajax event="keyup" render=":outputedTerms" listener="#{retrieveController.searchTermThatContainsString}"/>
-        </p:inputText>
-    </h:form>
-    <br/>
-    <br/>
-    <h:panelGrid id="outputedTerms" columns="1" width="500">
-        <ui:repeat value="#{retrieveController.terms}" var="term">
-            <p:layout style="min-width:50%;max-width:50%;min-height:300px;word-wrap:break-word" id="layout">
-                <p:layoutUnit position="center">
-                    <p:layout>
-                        <p:layoutUnit position="north">
-                            #{term.name}
-                        </p:layoutUnit>
-                        <p:layoutUnit position="west" style="text-align:center">
-                            <h:graphicImage value="resources/images/arrowup.png" />
-                            <br/>
-                            <h:graphicImage value="resources/images/arrowdown.png" />
-                            <p:outputLabel value="votes"/>
-                            <br/>
-                            <p:outputLabel value="#{term.totalVotes}"/>
-                        </p:layoutUnit>
-                        <p:layoutUnit position="center">
-                            #{term.description}
-                        </p:layoutUnit>
-                        <p:layoutUnit position="south">
-                            "Created on: " #{term.creationTime} by (add the creator)
-                        </p:layoutUnit>
-                    </p:layout>
-                </p:layoutUnit>
-            </p:layout>
-            <br/>
-        </ui:repeat>
-    </h:panelGrid>
+    <p:panel>
+        <h:form>
+            <p:outputLabel value="Nickname"/><p:inputText /><br/>
+            <p:outputLabel value="Password"/><p:inputText /><br/>
+        </h:form>
+        <h:link value="Login " outcome="search"/>
+        <h:link value=" Register" outcome="search"/>
+    </p:panel>
 </h:body>
 </html>

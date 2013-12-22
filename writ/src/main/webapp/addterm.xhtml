@@ -5,7 +5,8 @@
       xmlns:p="http://primefaces.org/ui">
 <h:head>add term</h:head>
 <h:body>
-    <h:link value="Go back to search" outcome="index" />
+    <h:link value="Go back to search" outcome="search" />
+
     <h:form>
         <h:outputLabel for="termname" value="Name:*" />
         <br/>
@@ -23,7 +24,7 @@
         <h:outputText id="counter" />
         <br/>
         <p:commandButton value="Submit" actionListener="#{createController.saveTerm}"
-                         ajax="false" />
+                         ajax="false" action="search?faces-redirect=true"/>
     </h:form>
 </h:body>
 </html>
