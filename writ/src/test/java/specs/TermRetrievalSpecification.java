@@ -26,28 +26,28 @@ public class TermRetrievalSpecification extends Cleanup {
 
     @Test
     public void return_all_terms_that_start_with() {
-        manager.add(aCustomTermWith("DN", "Directory Number..."));
-        manager.add(aCustomTermWith("MPF", "Metallic Path Facility..."));
-        manager.add(aCustomTermWith("SMPF", "Shared Metallic Path Facility..."));
-        manager.add(aCustomTermWith("BT", "British Telecom..."));
+        manager.add(aCustomTermWith("DN", "Directory Number...","Mr. Bombastic"));
+        manager.add(aCustomTermWith("MPF", "Metallic Path Facility...","Mr. Bombastic"));
+        manager.add(aCustomTermWith("SMPF", "Shared Metallic Path Facility...","Mr. Bombastic"));
+        manager.add(aCustomTermWith("BT", "British Telecom...","Mr. Bombastic"));
         assertThat(manager.getTermsWithNameStartingWith("S").size(),is(1));
     }
 
     @Test
     public void return_all_terms_that_contain() {
-        manager.add(aCustomTermWith("DN", "Directory Number..."));
-        manager.add(aCustomTermWith("MPF", "Metallic Path Facility..."));
-        manager.add(aCustomTermWith("SMPF", "Shared Metallic Path Facility..."));
-        manager.add(aCustomTermWith("BT", "British Telecom..."));
+        manager.add(aCustomTermWith("DN", "Directory Number...","Mr. Bombastic"));
+        manager.add(aCustomTermWith("MPF", "Metallic Path Facility...","Mr. Bombastic"));
+        manager.add(aCustomTermWith("SMPF", "Shared Metallic Path Facility...","Mr. Bombastic"));
+        manager.add(aCustomTermWith("BT", "British Telecom...","Mr. Bombastic"));
         assertThat(manager.getTermsWithNameContaining("MPF").size(),is(2));
     }
 
     @Test
     public void return_term_is_case_insensitive() {
-        manager.add(aCustomTermWith("DN", "Directory Number..."));
-        manager.add(aCustomTermWith("MPF", "Metallic Path Facility..."));
-        manager.add(aCustomTermWith("SMPF", "Shared Metallic Path Facility..."));
-        manager.add(aCustomTermWith("BT", "British Telecom..."));
+        manager.add(aCustomTermWith("DN", "Directory Number...","Mr. Bombastic"));
+        manager.add(aCustomTermWith("MPF", "Metallic Path Facility...","Mr. Bombastic"));
+        manager.add(aCustomTermWith("SMPF", "Shared Metallic Path Facility...","Mr. Bombastic"));
+        manager.add(aCustomTermWith("BT", "British Telecom...","Mr. Bombastic"));
 
         int upperCaseResults = manager.getTermsWithNameContaining("MPF").size();
         int lowerCaseResults = manager.getTermsWithNameContaining("mpf").size();

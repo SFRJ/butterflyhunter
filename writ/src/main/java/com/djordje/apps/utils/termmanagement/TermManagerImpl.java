@@ -1,6 +1,6 @@
 package com.djordje.apps.utils.termmanagement;
 
-import com.djordje.apps.dataaccess.PersistencyManager;
+import com.djordje.apps.dataaccess.inmemory.TermsPersistencyManager;
 import com.djordje.apps.dataaccess.inmemory.TermsInMemoryStorage;
 import com.djordje.apps.model.Term;
 
@@ -13,7 +13,7 @@ import static com.googlecode.totallylazy.Sequences.sequence;
 
 public class TermManagerImpl implements TermManager {
 
-    private PersistencyManager termsInMemoryStorage = new TermsInMemoryStorage();
+    private TermsPersistencyManager termsInMemoryStorage = new TermsInMemoryStorage();
 
     @Override
     public boolean add(Term term) {

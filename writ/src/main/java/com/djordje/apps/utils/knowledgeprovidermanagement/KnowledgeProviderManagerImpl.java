@@ -2,21 +2,28 @@ package com.djordje.apps.utils.knowledgeprovidermanagement;
 
 import com.djordje.apps.model.KnowledgeProvider;
 
-/**
- * Created with IntelliJ IDEA.
- * User: pro
- * Date: 21/12/13
- * Time: 16:57
- * To change this template use File | Settings | File Templates.
- */
 public class KnowledgeProviderManagerImpl implements KnowledgeProviderManager {
+
     @Override
-    public void update(KnowledgeProvider knowledgeProvider) {
-        //To change body of implemented methods use File | Settings | File Templates.
+    public boolean add(KnowledgeProvider knowledgeProvider) {
+        return false;
     }
 
     @Override
-    public KnowledgeProvider getKnowledgeProvider(String sfrj) {
+    public KnowledgeProvider getKnowledgeProvider(String nickname) {
         return new KnowledgeProvider();
+    }
+
+    @Override
+    public void deleteKnowledgeProvider(String nickname) {
+    }
+
+    @Override
+    public void updateVotes(KnowledgeProvider knowledgeProvider, String termName) {
+        //This should go in the persistency management class
+        KnowledgeProvider provider = getKnowledgeProvider(knowledgeProvider.getNickname());
+        provider.getVotedTerms().add(termName);
+        deleteKnowledgeProvider(knowledgeProvider.getNickname());
+        add(knowledgeProvider);
     }
 }

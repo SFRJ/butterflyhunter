@@ -11,9 +11,8 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Term {
 
-    public Term() {
-    }
-
+    @XmlElement(name = "AUTHOR")
+    private String author;
     @XmlElement(name = "NAME")
     private String name;
     @XmlElement(name = "DESCRIPTION")
@@ -27,9 +26,17 @@ public class Term {
     @XmlElement(name = "CREATIONTIME")
     private long creationTime;
 
-    public Term(String name, String description) {
+    public Term() {
+    }
+
+    public Term(String name, String description,String author) {
         this.name = name;
         this.description = description;
+        this.author = author;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 
     public String getName() {

@@ -1,19 +1,14 @@
 package specs;
 
-import com.djordje.apps.dataaccess.PersistencyManager;
 import com.djordje.apps.errorhandling.LongDescriptionException;
 import com.djordje.apps.errorhandling.TermAlreadyExistsException;
 import com.djordje.apps.model.Term;
 import com.djordje.apps.utils.termmanagement.TermManager;
 import com.djordje.apps.utils.termmanagement.TermManagerImpl;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import specs.support.Cleanup;
 
-import java.io.File;
-
-import static com.djordje.apps.dataaccess.PersistencyManager.PATH_TO_FILE_REPOSITORY;
+import static com.djordje.apps.dataaccess.inmemory.TermsPersistencyManager.PATH_TO_FILE_REPOSITORY;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -26,7 +21,7 @@ public class AddingANewTermSpecification extends Cleanup {
 
     @Test
     public void a_new_term_is_marshalled() {
-        Term term = new Term("AAA","AAA");
+        Term term = new Term("AAA","AAA","Mr. Bombastic");
         manager.add(term);
         assertThat(PATH_TO_FILE_REPOSITORY,is(notNullValue()));
     }

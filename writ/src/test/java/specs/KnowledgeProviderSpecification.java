@@ -1,5 +1,6 @@
 package specs;
 
+import com.djordje.apps.errorhandling.NicknameTakenException;
 import com.djordje.apps.model.KnowledgeProvider;
 import com.djordje.apps.model.Term;
 import com.djordje.apps.utils.knowledgeprovidermanagement.KnowledgeProviderManager;
@@ -26,6 +27,22 @@ public class KnowledgeProviderSpecification extends Cleanup {
     private final VotesManager votesManager = new VotesManagerImpl(termManager);
     private final Term term = aTermWithExactly400Characters();
     private final KnowledgeProviderManager knowledgeProviderManager = new KnowledgeProviderManagerImpl();
+
+    @Test
+    public void a_knowledge_provider_can_register() {
+        knowledgeProvider.setPassword("12345");
+        knowledgeProviderManager.add(knowledgeProvider);
+        KnowledgeProvider savedKnowledgeProvider = knowledgeProviderManager.getKnowledgeProvider("sfrj");
+        assertThat(savedKnowledgeProvider.getNickname(),is("sfrj"));
+    }
+
+    @Test(expected = NicknameTakenException.class)
+    public void a_knowledge_provider_cannot_register_if_the_nickname_is_taken() {
+        knowledgeProvider.setPassword("12345");
+        knowledgeProviderManager.add(knowledgeProvider);
+        knowledgeProviderManager.add(knowledgeProvider);
+    }
+
 
     @Test
     public void when_a_knowledge_provider_votes_on_a_term_the_term_name_is_added_to_the_list_of_voted_terms() {

@@ -10,6 +10,8 @@ public class KnowledgeProvider {
 
     @XmlElement(name = "NICKNAME")
     private String nickname;
+    @XmlElement(name = "PASSWORD")
+    private String password;
     @XmlElement(name = "VOTEDTERMS")
     private List<String> votedTerms = new ArrayList<String>();
 
@@ -23,6 +25,15 @@ public class KnowledgeProvider {
     public String getNickname() {
         return nickname;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
 
     public void setNickname(String nickname) {
         this.nickname = nickname;

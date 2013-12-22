@@ -14,10 +14,12 @@ import javax.faces.context.FacesContext;
 @RequestScoped
 public class CreateController {
 
+    private String author;
     private String termName;
     private String termDescription;
 
     public CreateController() {
+        this.author = "Get the author name from the session!!!!";
     }
 
     public String getTermName() {
@@ -39,7 +41,7 @@ public class CreateController {
     public void saveTerm() {
         TermManager termManager = new TermManagerImpl();
         try {
-            termManager.add(new Term(termName,termDescription));
+            termManager.add(new Term(termName,termDescription,author));
         }
         catch (TermAlreadyExistsException e) {
             FacesMessage facesMessage =

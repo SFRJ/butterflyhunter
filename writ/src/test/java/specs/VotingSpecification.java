@@ -23,7 +23,7 @@ public class VotingSpecification extends Cleanup {
     private final TermManager termManager = new TermManagerImpl();
     private final VotesManager votesManager = new VotesManagerImpl(termManager);
     private final Term term = aTermWithExactly400Characters();
-
+//
     @Test
     public void a_term_can_get_possitive_votes() {
         termManager.add(term);

@@ -42,7 +42,7 @@ public class VotesManagerImpl implements VotesManager {
 
     private void addTermToListOfVotedTermsByKnowledProvider(KnowledgeProvider knowledgeProvider, Term term) {
         knowledgeProvider.getVotedTerms().add(term.getName());
-        knowledgeProviderManager.update(knowledgeProvider);
+        knowledgeProviderManager.updateVotes(knowledgeProvider,term.getName());
     }
 
     private Term getTermByName(Term sampleTerm) {

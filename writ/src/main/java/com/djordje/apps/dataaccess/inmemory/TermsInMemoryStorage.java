@@ -1,7 +1,5 @@
 package com.djordje.apps.dataaccess.inmemory;
 
-import com.djordje.apps.dataaccess.PersistencyManager;
-import com.djordje.apps.errorhandling.TermNotFoundException;
 import com.djordje.apps.model.Term;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -12,7 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.*;
 
-public class TermsInMemoryStorage implements PersistencyManager {
+public class TermsInMemoryStorage implements TermsPersistencyManager {
 
     public Term get(String key) {
         Term output = null;

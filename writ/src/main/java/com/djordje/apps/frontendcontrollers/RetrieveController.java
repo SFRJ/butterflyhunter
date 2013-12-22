@@ -1,13 +1,12 @@
 package com.djordje.apps.frontendcontrollers;
 
-import com.djordje.apps.dataaccess.PersistencyManager;
+import com.djordje.apps.dataaccess.inmemory.TermsPersistencyManager;
 import com.djordje.apps.dataaccess.inmemory.TermsInMemoryStorage;
 import com.djordje.apps.model.Term;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
 import javax.faces.event.AjaxBehaviorEvent;
 import java.util.List;
 
@@ -15,15 +14,15 @@ import java.util.List;
 @RequestScoped
 public class RetrieveController {
 
-    private PersistencyManager persistencyManager;
+    private TermsPersistencyManager termsPersistencyManager;
     private List<Term> termsToDisplay;
     private String searchTerm;
 
     @PostConstruct
     public void init() {
         //Todo: Display by default the latest added(by time)
-        persistencyManager = new TermsInMemoryStorage();
-        termsToDisplay = persistencyManager.getAll();
+        termsPersistencyManager = new TermsInMemoryStorage();
+        termsToDisplay = termsPersistencyManager.getAll();
         searchTerm = "";
     }
 
@@ -45,6 +44,6 @@ public class RetrieveController {
     }
 
     public void searchTermThatContainsString(AjaxBehaviorEvent ajaxBehaviorEvent) {
-        termsToDisplay = persistencyManager.getAllContaining(searchTerm);
+        termsToDisplay = termsPersistencyManager.getAllContaining(searchTerm);
     }
 }

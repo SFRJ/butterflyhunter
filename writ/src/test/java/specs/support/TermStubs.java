@@ -10,7 +10,7 @@ public class TermStubs {
                "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
                "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
                "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
-               "xxxxxxxxxxxxxxxxxxxxx");
+               "xxxxxxxxxxxxxxxxxxxxx","Mr. Bombastic");
     }
 
     public static Term aTermWithMoreThan400Characters() {
@@ -18,10 +18,10 @@ public class TermStubs {
                 "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
                 "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
                 "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
-                "xxxxxxxxxxxxxxxxxxxxxx");
+                "xxxxxxxxxxxxxxxxxxxxxx","Mr. Bombastic");
     }
 
-    public static Term aCustomTermWith(String name, String description) {
-        return new Term(name,description);
+    public static Term aCustomTermWith(String name, String description,String author) {
+        return new Term(name,description,author);
     }
 }

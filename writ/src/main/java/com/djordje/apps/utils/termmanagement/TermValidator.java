@@ -1,14 +1,14 @@
 package com.djordje.apps.utils.termmanagement;
 
-import com.djordje.apps.dataaccess.PersistencyManager;
+import com.djordje.apps.dataaccess.inmemory.TermsPersistencyManager;
 import com.djordje.apps.errorhandling.LongDescriptionException;
 import com.djordje.apps.errorhandling.TermAlreadyExistsException;
 import com.djordje.apps.model.Term;
 
 public class TermValidator {
 
-    protected static boolean validateTerm(Term term,PersistencyManager persistencyManager) {
-        return isTermNotInStorage(term.getName(), persistencyManager) &&
+    protected static boolean validateTerm(Term term,TermsPersistencyManager termsPersistencyManager) {
+        return isTermNotInStorage(term.getName(), termsPersistencyManager) &&
                 isDescriptionSmallerOrEqual400Characters(term.getDescription());
     }
 
@@ -18,8 +18,8 @@ public class TermValidator {
         return  true;
     }
 
-    private static boolean isTermNotInStorage(String key,PersistencyManager persistencyManager) {
-        if(persistencyManager.get(key) != null)
+    private static boolean isTermNotInStorage(String key,TermsPersistencyManager termsPersistencyManager) {
+        if(termsPersistencyManager.get(key) != null)
             throw new TermAlreadyExistsException("The term " + key + " already exists in the storage");
         return true;
     }
