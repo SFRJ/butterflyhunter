@@ -5,18 +5,6 @@ import com.djordje.apps.model.Term;
 
 public class TermStubs {
 
-    public static Term aSimpleTerm() {
-        return new Term("AAA","Acronym which stands for Arrange,Act,Assert. It is a well known unit testing design pattern");
-    }
-
-    public static Term aTermWithNoDescription() {
-        return new Term("AAA",null);
-    }
-
-    public static Term aTermWithNoName() {
-        return new Term(null,"Acronym which stands for Arrange,Act,Assert. It is a well known unit testing design pattern");
-    }
-
     public static Term aTermWithExactly400Characters() {
        return new Term("SampleTerm","xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
                "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" +
