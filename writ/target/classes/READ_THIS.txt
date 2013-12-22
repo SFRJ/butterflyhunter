@@ -1,2 +1,0 @@
-In this folder it is not possible to write at run time.
-If you need to create files on the disk of the appserver you have to do it in a folder external to the project.
