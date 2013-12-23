@@ -1,17 +1,21 @@
 package com.djordje.apps.utils.knowledgeprovidermanagement;
 
+import com.djordje.apps.dataaccess.inmemory.UsersInMemoryStorage;
+import com.djordje.apps.dataaccess.inmemory.UsersPersistenceManager;
 import com.djordje.apps.model.KnowledgeProvider;
 
 public class KnowledgeProviderManagerImpl implements KnowledgeProviderManager {
 
+    UsersPersistenceManager usersPersistenceManager = new UsersInMemoryStorage();
+
     @Override
     public boolean add(KnowledgeProvider knowledgeProvider) {
-        return false;
+        return usersPersistenceManager.add(knowledgeProvider);
     }
 
     @Override
     public KnowledgeProvider getKnowledgeProvider(String nickname) {
-        return new KnowledgeProvider();
+        return usersPersistenceManager.getKnowledgeProvider(nickname);
     }
 
     @Override

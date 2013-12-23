@@ -20,7 +20,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static specs.support.TermStubs.aTermWithExactly400Characters;
 
-public class KnowledgeProviderSpecification extends Cleanup {
+public class KnowledgeProviderSpecification /*extends Cleanup*/ {
 
     private final KnowledgeProvider knowledgeProvider = new KnowledgeProvider("sfrj");
     private final TermManager termManager = new TermManagerImpl();

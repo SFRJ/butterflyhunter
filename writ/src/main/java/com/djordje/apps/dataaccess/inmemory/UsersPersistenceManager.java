@@ -2,7 +2,11 @@ package com.djordje.apps.dataaccess.inmemory;
 
 import com.djordje.apps.model.KnowledgeProvider;
 
+import java.io.File;
+
 public interface UsersPersistenceManager {
+
+    public final File PATH_TO_FILE_REPOSITORY = new File("/home/pro/Desktop/glassfish4/temporaryxmlstorage/users/");
 
     public boolean add(KnowledgeProvider knowledgeProvider);
 

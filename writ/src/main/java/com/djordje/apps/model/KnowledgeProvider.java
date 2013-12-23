@@ -14,6 +14,8 @@ public class KnowledgeProvider {
     private String password;
     @XmlElement(name = "VOTEDTERMS")
     private List<String> votedTerms = new ArrayList<String>();
+    @XmlElement(name = "CREATIONTIME")
+    private long creationTime;
 
     public KnowledgeProvider() {
     }
@@ -41,5 +43,13 @@ public class KnowledgeProvider {
 
     public List<String> getVotedTerms() {
         return votedTerms;
+    }
+
+    public void setCreationTime(long creationTime) {
+        this.creationTime = creationTime;
+    }
+
+    public long getCreationTime() {
+        return creationTime;
     }
 }

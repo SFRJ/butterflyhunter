@@ -10,8 +10,9 @@
             <p:outputLabel value="Nickname"/><p:inputText /><br/>
             <p:outputLabel value="Password"/><p:inputText /><br/>
         </h:form>
-        <h:link value="Login " outcome="search"/>
-        <h:link value=" Register" outcome="search"/>
+        <h:link value="loginControler.login()" outcome="search"/>
+        <p:commandButton value="Login" action="loginControler.login"/>
+        <p:commandButton value="Register" action="registrationControler.register"/>
     </p:panel>
 </h:body>
 </html>
