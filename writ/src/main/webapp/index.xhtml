@@ -7,12 +7,11 @@
 <h:body>
     <p:panel>
         <h:form>
-            <p:outputLabel value="Nickname"/><p:inputText /><br/>
-            <p:outputLabel value="Password"/><p:inputText /><br/>
+            <p:outputLabel value="Nickname"/><p:inputText value="#{registrationController.nickName}" /><br/>
+            <p:outputLabel value="Password"/><p:inputText value="#{registrationController.password}"/><br/>
+            <p:commandButton value="Login" action="loginControler.login"/>
+            <p:commandButton value="Register" ajax="false" action="#{registrationController.register}"/>
         </h:form>
-        <h:link value="loginControler.login()" outcome="search"/>
-        <p:commandButton value="Login" action="loginControler.login"/>
-        <p:commandButton value="Register" action="registrationControler.register"/>
     </p:panel>
 </h:body>
 </html>

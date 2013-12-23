@@ -18,12 +18,13 @@ public class RegistrationController {
     public RegistrationController() {
         knowledgeProviderManager = new KnowledgeProviderManagerImpl();
     }
-
+    //This should not redirect to the search page if it fails to register
     public String register() {
         return validateRegistration(nickName, password) ? "search":"index";
     }
 
     private boolean validateRegistration(String nickName, String password) {
+        //TODO implement validation
         KnowledgeProvider knowledgeProvider = new KnowledgeProvider();
         knowledgeProvider.setPassword(password);
         knowledgeProvider.setNickname(nickName);

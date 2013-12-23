@@ -13,6 +13,6 @@ public interface UsersPersistenceManager {
     public KnowledgeProvider getKnowledgeProvider(String nickname);
 
     public void deleteKnowledgeProvider(String nickname);
-
+    //TODO Implement this(Required when voting on a term)
     public void updateVotes(KnowledgeProvider knowledgeProvider, String termName);
 }
