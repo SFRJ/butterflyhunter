@@ -2,6 +2,7 @@ package com.djordje.apps.utils.knowledgeprovidermanagement;
 
 import com.djordje.apps.dataaccess.inmemory.UsersInMemoryStorage;
 import com.djordje.apps.dataaccess.inmemory.UsersPersistenceManager;
+import com.djordje.apps.errorhandling.NicknameTakenException;
 import com.djordje.apps.model.KnowledgeProvider;
 
 public class KnowledgeProviderManagerImpl implements KnowledgeProviderManager {
@@ -10,6 +11,8 @@ public class KnowledgeProviderManagerImpl implements KnowledgeProviderManager {
 
     @Override
     public boolean add(KnowledgeProvider knowledgeProvider) {
+        if(usersPersistenceManager.getKnowledgeProvider(knowledgeProvider.getNickname()) != null)
+           throw new NicknameTakenException("the name " + knowledgeProvider.getNickname() + " is already taken");
         return usersPersistenceManager.add(knowledgeProvider);
     }
 
@@ -20,6 +23,7 @@ public class KnowledgeProviderManagerImpl implements KnowledgeProviderManager {
 
     @Override
     public void deleteKnowledgeProvider(String nickname) {
+        usersPersistenceManager.deleteKnowledgeProvider(nickname);
     }
 
     @Override

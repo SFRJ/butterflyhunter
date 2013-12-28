@@ -20,7 +20,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static specs.support.TermStubs.aTermWithExactly400Characters;
 
-public class KnowledgeProviderSpecification /*extends Cleanup*/ {
+public class KnowledgeProviderSpecification extends Cleanup {
 
     private final KnowledgeProvider knowledgeProvider = new KnowledgeProvider("sfrj");
     private final TermManager termManager = new TermManagerImpl();
@@ -46,6 +46,7 @@ public class KnowledgeProviderSpecification /*extends Cleanup*/ {
 
     @Test
     public void when_a_knowledge_provider_votes_on_a_term_the_term_name_is_added_to_the_list_of_voted_terms() {
+        knowledgeProviderManager.add(knowledgeProvider);
         termManager.add(term);
         votesManager.plusVote(term,knowledgeProvider);
         boolean containsVotedTerm = false;

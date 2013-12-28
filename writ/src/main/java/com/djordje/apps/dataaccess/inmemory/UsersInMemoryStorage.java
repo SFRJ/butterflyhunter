@@ -57,7 +57,14 @@ public class UsersInMemoryStorage implements UsersPersistenceManager{
 
     @Override
     public void deleteKnowledgeProvider(String nickname) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        for(File current : PATH_TO_FILE_REPOSITORY.listFiles()) {
+            if(current.isFile()){
+                KnowledgeProvider knowledgeProvider = (KnowledgeProvider) unmarshall(current);
+                if(knowledgeProvider.getNickname().equalsIgnoreCase(nickname))
+                    current.delete();
+                break;
+            }
+        }
     }
 
     @Override
