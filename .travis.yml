@@ -1,4 +1,5 @@
 language: java
 before_install: cd writ
+script: ./bin/run_tests.sh
 
          
