@@ -1,4 +1,4 @@
 language: java
 before_install: cd writ
-install:  mvn install
+
          
