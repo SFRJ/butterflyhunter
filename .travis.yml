@@ -1,2 +1,4 @@
 language: java
-install: mvn test
+before_install: cd writ
+install:  mvn test
+         
