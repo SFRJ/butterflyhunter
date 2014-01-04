@@ -20,17 +20,6 @@ public class TermRetrievalSpecification extends Cleanup {
         assertThat(manager.getTerms().size(),is(1));
     }
 
-
-
-    @Test
-    public void return_all_terms_that_start_with() {
-        manager.add(aCustomTermWith("DN", "Directory Number...","Mr. Bombastic"));
-        manager.add(aCustomTermWith("MPF", "Metallic Path Facility...","Mr. Bombastic"));
-        manager.add(aCustomTermWith("SMPF", "Shared Metallic Path Facility...","Mr. Bombastic"));
-        manager.add(aCustomTermWith("BT", "British Telecom...","Mr. Bombastic"));
-        assertThat(manager.getTermsWithNameStartingWith("S").size(),is(1));
-    }
-
     @Test
     public void return_all_terms_that_contain() {
         manager.add(aCustomTermWith("DN", "Directory Number...","Mr. Bombastic"));

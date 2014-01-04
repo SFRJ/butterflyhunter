@@ -1,7 +1,7 @@
 package main.java.com.djordje.apps.frontendcontrollers;
 
 import main.java.com.djordje.apps.core.Term;
-import main.java.com.djordje.apps.services.errorhandling.TermAlreadyExistsException;
+import main.java.com.djordje.apps.core.errors.TermAlreadyExistsException;
 import main.java.com.djordje.apps.services.terms.TermManager;
 import main.java.com.djordje.apps.services.terms.TermManagerImpl;
 

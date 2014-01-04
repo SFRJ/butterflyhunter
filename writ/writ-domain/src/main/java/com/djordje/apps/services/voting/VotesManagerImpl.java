@@ -1,8 +1,9 @@
 package main.java.com.djordje.apps.services.voting;
 
+import main.java.com.djordje.apps.api.VotesManagementService;
 import main.java.com.djordje.apps.core.KnowledgeProvider;
 import main.java.com.djordje.apps.core.Term;
-import main.java.com.djordje.apps.services.errorhandling.AllreadyVotedOnThatTermException;
+import main.java.com.djordje.apps.core.errors.AllreadyVotedOnThatTermException;
 import main.java.com.djordje.apps.services.knowledge.KnowledgeProviderManager;
 import main.java.com.djordje.apps.services.knowledge.KnowledgeProviderManagerImpl;
 import main.java.com.djordje.apps.services.terms.TermManager;
@@ -11,11 +12,11 @@ import static main.java.com.djordje.apps.services.voting.VoteValidator.canCastAV
 
 public class VotesManagerImpl implements VotesManager {
 
-    private TermManager termManager;
+    private final VotesManagementService votesManagementService;
     KnowledgeProviderManager knowledgeProviderManager = new KnowledgeProviderManagerImpl();
 
-    public VotesManagerImpl(TermManager termManager) {
-        this.termManager = termManager;
+    public VotesManagerImpl(VotesManagementService votesManagementService) {
+        this.votesManagementService = votesManagementService;
     }
 
     @Override

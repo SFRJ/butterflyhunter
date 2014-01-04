@@ -1,6 +1,6 @@
 package test;
 
-import main.java.com.djordje.apps.dataaccess.inmemory.TermsInMemoryStorage;
+import main.java.com.djordje.apps.dataaccess.inmemory.terms.TermsInMemoryStorage;
 import org.junit.Test;
 import test.support.Cleanup;
 

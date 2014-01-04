@@ -2,7 +2,7 @@ package test;
 
 import main.java.com.djordje.apps.core.KnowledgeProvider;
 import main.java.com.djordje.apps.core.Term;
-import main.java.com.djordje.apps.services.errorhandling.NicknameTakenException;
+import main.java.com.djordje.apps.core.errors.NicknameTakenException;
 import main.java.com.djordje.apps.services.knowledge.KnowledgeProviderManager;
 import main.java.com.djordje.apps.services.knowledge.KnowledgeProviderManagerImpl;
 import main.java.com.djordje.apps.services.terms.TermManager;

@@ -1,48 +1,39 @@
 package main.java.com.djordje.apps.services.terms;
 
-import com.djordje.apps.dataaccess.inmemory.TermsInMemoryStorage;
-import com.djordje.apps.dataaccess.inmemory.TermsPersistencyManager;
-import com.djordje.apps.model.Term;
-
+import main.java.com.djordje.apps.api.TermManagementService;
+import main.java.com.djordje.apps.core.Term;
 import java.util.List;
-
-import static com.djordje.apps.utils.termmanagement.FunctionalSupport.*;
-import static com.djordje.apps.utils.termmanagement.TermValidator.validateTerm;
-import static com.googlecode.totallylazy.Sequences.sequence;
-
 
 public class TermManagerImpl implements TermManager {
 
-    private TermsPersistencyManager termsInMemoryStorage = new TermsInMemoryStorage();
+    private final TermManagementService termManagementService;
+
+    public TermManagerImpl(TermManagementService termManagementService) {
+        this.termManagementService = termManagementService;
+    }
 
     @Override
     public boolean add(Term term) {
-        validateTerm(term, termsInMemoryStorage);
-        return termsInMemoryStorage.add(term);
+        return termManagementService.add(term);
     }
 
     @Override
     public Term getByName(String name) {
-        return termsInMemoryStorage.get(name);
+        return termManagementService.getByName(name);
     }
 
     @Override
     public List<Term> getTerms() {
-        return termsInMemoryStorage.getAll();
-    }
-
-    @Override
-    public List<Term> getTermsWithNameStartingWith(String prefix) {
-        return sequence(getTerms()).map(termsStartingWith(prefix)).filter(isNotNull()).toList();
+        return termManagementService.getTerms();
     }
 
     @Override
     public List<Term> getTermsWithNameContaining(String partialString) {
-        return sequence(getTerms()).map(termsContaining(partialString)).filter(isNotNull()).toList();
+        return termManagementService.getTermsWithNameContaining(partialString);
     }
 
     @Override
     public void update(Term term) {
-        termsInMemoryStorage.update(term);
+        termManagementService.update(term);
     }
 }

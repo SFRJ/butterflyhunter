@@ -1,11 +1,11 @@
-package main.java.com.djordje.apps.services.terms;
+package main.java.com.djordje.apps.api;
 
 
 import main.java.com.djordje.apps.core.Term;
 
 import java.util.List;
 
-public interface TermManager {
+public interface TermManagementService {
 
     public boolean add(Term term);
 
