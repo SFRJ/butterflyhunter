@@ -20,7 +20,7 @@ public class VotingSpecification extends Cleanup {
 
     private final KnowledgeProvider knowledgeProvider = new KnowledgeProvider("sfrj");
     private final TermManager termManager = new TermManagerImpl();
-    private final VotesManager votesManager = new VotesManagerImpl(termManager);
+    private final VotesManager votesManager = new VotesManagerImpl(termManager, knowledgeProviderManagementService);
     private final KnowledgeProviderManager knowledgeProviderManager = new KnowledgeProviderManagerImpl();
     private final Term term = aTermWithExactly400Characters();
 
