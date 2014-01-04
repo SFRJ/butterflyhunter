@@ -6,6 +6,8 @@
     <version>1.0-SNAPSHOT</version>
     <name>primefaces Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <packaging>pom</packaging>
+
     <repositories>
             <repository>
                 <id>repo.bodar.com</id>
